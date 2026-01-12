@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Backend Template Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Documentation for Backend Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Backend Template',
+      repo: 'https://github.com/Me-Documentacao/template-backend',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        placeholder: 'Pesquisar...',
+        noData: 'Nenhum resultado!',
+        depth: 6
+      },
+      darklightTheme: {
+        siteFont : 'PT Sans',
+        defaultTheme : 'dark',
+        codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize : '17px',
+        dark: {
+          accent: '#42b983',
+          toogleBackground : '#ffffff',
+          background: '#091a28',
+          textColor: '#b4b4b4',
+          codeBackgroundColor : '#0e2233',
+          codeTextColor : '#b4b4b4',
+          coverBackground : '#0d2538',
+          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+        },
+        light: {
+          accent: '#42b983',
+          toogleBackground : '#091a28',
+          background: '#ffffff',
+          textColor: '#34495e',
+          codeBackgroundColor : '#f8f8f8',
+          codeTextColor : '#525252',
+          coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(147, 100%, 85%) 100%)',
+          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+        }
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+</body>
+</html>
