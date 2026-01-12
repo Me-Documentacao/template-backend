@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Lint Check (Rigoroso)
+        # Atende ao item 1: ESLint (rigoroso)
+        run: npm run lint
+
+      - name: Type Check
+        run: npm run typecheck
+
+      - name: Run Tests (Coverage 90%)
+        # Atende ao item 3: Cobertura mínima 90%
+        run: npm run test:cov
+
+      - name: Build Check
+        # Atende ao item 9: Pipeline deve conter Build
+        run: npm run build
